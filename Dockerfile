@@ -1,7 +1,7 @@
 FROM maven:latest
 COPY src /home/app/src
 COPY pom.xml /home/app
-RUN mvn clean
+RUN mvn -f /home/app/pom.xml clean
 RUN mvn -f /home/app/pom.xml clean package
 ADD ./home/app/target/pruebasopenshiftexample-0.0.1-SNAPSHOT.jar app.jar
 FROM openjdk:8-jdk-alpine
