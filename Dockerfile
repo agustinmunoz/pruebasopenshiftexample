@@ -30,6 +30,7 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
 RUN mvn -version
 RUN pwd
+RUN ls
 RUN cd /workspace/output/
 RUN mvn clean package
 #COPY src /home/app/src
