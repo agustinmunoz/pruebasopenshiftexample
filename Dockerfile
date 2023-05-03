@@ -10,6 +10,7 @@ ARG SHA=332088670d14fa9ff346e6858ca0acca304666596fec86eea89253bd496d3c90deae2be5
 
 #ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
 ARG BASE_URL=https://dlcdn.apache.org/maven/maven-3/${MAVEN_VERSION}/binaries
+ARG variable_with_path=/usr/share/maven
 
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
   && echo "Downlaoding maven" \
@@ -32,7 +33,7 @@ RUN mvn -version
 RUN cd
 RUN pwd
 RUN ls
-RUN cd /usr/share/maven
+RUN cd $variable_with_path
 RUN ls
 RUN pwd
 RUN mvn clean package
