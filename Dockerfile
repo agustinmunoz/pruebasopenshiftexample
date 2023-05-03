@@ -32,7 +32,7 @@ RUN mvn -version
 RUN cd
 RUN pwd
 RUN ls
-RUN cd var
+RUN cd /usr/share/maven
 RUN ls
 RUN pwd
 RUN mvn clean package
