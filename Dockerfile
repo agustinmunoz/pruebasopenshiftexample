@@ -32,7 +32,7 @@ RUN mvn -version
 RUN cd
 RUN pwd
 RUN ls
-RUN cd /usr
+RUN cd var
 RUN ls
 RUN pwd
 RUN mvn clean package
