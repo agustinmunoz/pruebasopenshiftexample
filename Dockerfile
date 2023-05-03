@@ -29,10 +29,12 @@ ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
 RUN mvn -version
+RUN cd
 RUN pwd
 RUN ls
 RUN cd /var
 RUN ls
+RUN pwd
 RUN mvn clean package
 #COPY src /home/app/src
 #COPY pom.xml /home/app
