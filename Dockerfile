@@ -33,7 +33,7 @@ RUN mvn -version
 RUN cd
 RUN pwd
 RUN ls
-RUN cd $variable_with_path
+RUN cd ${variable_with_path}
 RUN ls
 RUN pwd
 RUN mvn clean package
